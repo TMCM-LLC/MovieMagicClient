@@ -1,0 +1,19 @@
+.container {
+    max-width: 900px;
+    margin: auto;
+
+    h1 {
+        margin-top: 4rem;
+    }
+}
+
+.movie-wrapper {
+    padding: 30px;
+    font-size: 2rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+
+}

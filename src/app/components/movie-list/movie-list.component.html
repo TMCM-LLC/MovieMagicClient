@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>My Movies</h1>
+
+    <div class="movie-list" *ngIf="movies && movies.length > 0">
+        <div class="movie-wrapper" *ngFor="let movie of movies">
+            <div>{{movie.name}}</div>
+            <div>{{movie.rating}}</div>
+        </div>
+    </div>
+</div>
