@@ -9,14 +9,24 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class MovieListComponent implements OnInit {
 
-  movies: Movie[];
+    newMovie: Movie;
+    movies: Movie[];
 
-  constructor(private movieService: MovieService) { }
+    constructor(private movieService: MovieService) { }
 
-  ngOnInit(): void {
-    this.movieService.getMovies().subscribe(result => {
-      this.movies = result;
-    });
-  }
+    ngOnInit(): void {
+        this.newMovie = {
+            id: 'asdf',
+            name: 'test',
+            rating: 3
+        };
+        this.movieService.getMovies().subscribe(result => {
+            this.movies = result;
+        });
+    }
 
+    ratingChanged(movie: Movie, rating: number) {
+        movie.rating = rating;
+        this.movieService.updateMovie(movie).subscribe();
+    }
 }

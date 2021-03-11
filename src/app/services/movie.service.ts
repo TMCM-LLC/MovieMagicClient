@@ -29,7 +29,7 @@ export class MovieService {
   }
 
   updateMovie(movie: Movie) {
-    return this.http.put(this.baseUrl, movie);
+    return this.http.put(`${this.baseUrl}/${movie.id}`, movie);
   }
 
   deleteMovie(movieId: string) {
