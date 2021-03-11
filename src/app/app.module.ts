@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
+import { StarsComponent } from './components/stars/stars.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieListComponent,
-    NavBarComponent
+    NavBarComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule,

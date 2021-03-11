@@ -1,0 +1,41 @@
+<div class="rate">
+    <input type="radio" 
+        [id]="'star5-' + movie.id" 
+        [name]="'rate-' + movie.id" 
+        value="5" 
+        [checked]="movie.rating == 5"
+        (change)="ratingClicked.emit(5)" />
+    <label [for]="'star5-' + movie.id" title="text">5 stars</label>
+    
+    <input type="radio" 
+        [id]="'star4-' + movie.id" 
+        [name]="'rate-' + movie.id" 
+        value="4" 
+        [checked]="movie.rating == 4"
+        (change)="ratingClicked.emit(4)" />
+    <label [for]="'star4-' + movie.id" title="text">4 stars</label>
+    
+    <input type="radio" 
+        [id]="'star3-' + movie.id" 
+        [name]="'rate-' + movie.id" 
+        value="3" 
+        [checked]="movie.rating == 3"
+        (change)="ratingClicked.emit(3)" />
+    <label [for]="'star3-' + movie.id" title="text">3 stars</label>
+    
+    <input type="radio" 
+        [id]="'star2-' + movie.id" 
+        [name]="'rate-' + movie.id" 
+        value="2" 
+        [checked]="movie.rating == 2"
+        (change)="ratingClicked.emit(2)" />
+    <label [for]="'star2-' + movie.id" title="text">2 stars</label>
+    
+    <input type="radio" 
+        [id]="'star1-' + movie.id" 
+        [name]="'rate-' + movie.id" 
+        value="1" 
+        [checked]="movie.rating == 1"
+        (change)="ratingClicked.emit(1)" />
+    <label [for]="'star1-' + movie.id" title="text">1 star</label>
+  </div>
