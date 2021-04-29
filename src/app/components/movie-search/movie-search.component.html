@@ -1,0 +1,17 @@
+<div class="search-wrapper">
+    <div class="input-wrapper">
+        <input class="search-input" type="text" [(ngModel)]="searchTerm">
+
+        <mat-icon class="search-btn" (click)="search()" aria-hidden="false" aria-label="Search">search</mat-icon>    
+    </div>
+    
+    <div class="result-wrapper">
+        <div class="result" *ngFor="let movie of searchResults" >
+            <img src="{{movie.Poster}}">
+            <div class="movie-data">
+                <p class="title">{{movie.Title}}</p>
+                <p class="year">{{movie.year}}</p>
+            </div>
+        </div>
+    </div>
+</div>

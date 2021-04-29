@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Movie } from '../models/movie';
+import { SearchResult } from '../models/searchResult';
 
 @Injectable({
   providedIn: 'root'
@@ -34,5 +35,9 @@ export class MovieService {
 
   deleteMovie(movieId: string) {
     return this.http.delete(this.baseUrl + '/' + movieId);
+  }
+
+  searchMovie(key: string): Observable<SearchResult[]> {
+      return this.http.get<SearchResult[]>(this.baseUrl + '/search/' + key);
   }
 }
