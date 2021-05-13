@@ -1,3 +1,8 @@
 <nav>
-    Movie Magic
+    <div>Movie Magic</div>
+    <div class="nav-links">
+        <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+            true}">My Movies</a>
+        <a [routerLink]="['/search']" routerLinkActive="active">Search</a>
+    </div>
 </nav>

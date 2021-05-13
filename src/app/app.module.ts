@@ -11,6 +11,7 @@ import { StarsComponent } from './components/stars/stars.component';
 import { MovieSearchComponent } from './components/movie-search/movie-search.component';
 
 import {MatIconModule} from '@angular/material/icon';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatIconModule} from '@angular/material/icon';
     MovieListComponent,
     NavBarComponent,
     StarsComponent,
-    MovieSearchComponent
+    MovieSearchComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

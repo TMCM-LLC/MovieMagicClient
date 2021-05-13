@@ -6,7 +6,7 @@
     </div>
     
     <div class="result-wrapper">
-        <div class="result" *ngFor="let movie of searchResults" >
+        <div class="result" *ngFor="let movie of searchResults" [routerLink]="['/',movie.imdbID ]">
             <img src="{{movie.Poster}}">
             <div class="movie-data">
                 <p class="title">{{movie.Title}}</p>

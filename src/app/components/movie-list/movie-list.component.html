@@ -1,14 +1,8 @@
 <div class="container">
     <h1>My Movies</h1>
 
-    <!-- <div class="new-movie">
-        <input id="newTitle" [(ngModel)]="newMovie.name">
-        <input id="newRating" [(ngModel)]="newMovie.rating">
-        <app-stars [movie]="newMovie" ></app-stars>
-    </div> -->
-
     <div class="movie-list" *ngIf="movies && movies.length > 0">
-        <div class="movie-wrapper" *ngFor="let movie of movies">
+        <div class="movie-wrapper" *ngFor="let movie of movies" [routerLink]="['/', movie.externalId ]">
             <div>{{movie.name}}</div>
 
             <app-stars [movie]="movie" (ratingClicked)="ratingChanged(movie, $event)"></app-stars>

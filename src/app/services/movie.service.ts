@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Movie } from '../models/movie';
+import { MovieDetail } from '../models/movieDetail';
 import { SearchResult } from '../models/searchResult';
 
 @Injectable({
@@ -18,7 +19,7 @@ export class MovieService {
   }
 
   getMovieById(movieId: string) {
-    return this.http.get<Movie>(`${this.baseUrl}/${movieId}`);
+    return this.http.get<MovieDetail>(`${this.baseUrl}/${movieId}`);
   }
 
   createMovie(movie: Movie) {

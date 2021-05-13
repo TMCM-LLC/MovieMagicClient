@@ -1,9 +1,29 @@
 nav {
     display: block;
-    width: 100%;
     background-color: #EC0033;
     color: white;
     font-size: 2rem;
     margin: 0;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links {
+    
+    a {
+        font-size: 1.3rem;
+        margin-left: 1.5rem;
+        text-decoration: none;
+        color: white;
+        padding-bottom: 0.2rem;
+
+        &.active {
+            border-bottom: 2px solid white;
+        }
+    }
+
+    a:hover, a:active {
+        color: #FFDC64;
+    }
 }

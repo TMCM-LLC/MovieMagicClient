@@ -1,0 +1,22 @@
+<div class="main-wrapper" *ngIf="details">
+    <div class="movie-detail">
+        <img [src]="details.poster" [alt]="details.title"> 
+        <div>
+            <h1>{{details.title}}</h1>
+            <div class="year-rating">
+                <p>{{details.year}}</p>
+                <p>{{details.filmRating}}</p>
+            </div>
+            <p class="plot">{{details.plot}}</p>
+        </div>
+    </div>
+    <div class="user-rating-wrapper">
+        <h2>My Rating:</h2>
+        <app-stars [movie]="details"></app-stars>
+    </div>
+    <div class="critic-rating-wrapper">
+        <p>{{details.imdbRating}}</p>
+        <p>{{details.metacritic}}</p>
+        <p>{{details.rottenTomatoes}}</p>
+    </div>
+</div>
