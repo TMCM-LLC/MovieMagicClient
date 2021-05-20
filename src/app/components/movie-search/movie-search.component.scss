@@ -11,8 +11,7 @@
 }
 
 .search-wrapper {
-    max-width: 900px;
-    margin: 100px auto;
+    margin: 1.5rem;
 }
 
 .search-btn {
@@ -25,14 +24,13 @@
 
 .result-wrapper {
     margin: 40px 0;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 1.5rem;
+    display: block;
 }
 
 .result {
     border: 1px solid #888;
+    margin-bottom: 1.5rem;
+
     border-radius: 0.5rem;
     display: grid;
     grid-template-columns: 145px 1fr;
@@ -57,5 +55,28 @@
             font-size: 1.25rem;
             color: #888;
         }
+    }
+}
+
+/* tablet portrait */
+@media (min-width: 500px) {
+    .search-wrapper {
+        max-width: 500px;
+        margin: 1.5rem auto;
+    }
+}
+
+/* Screens larger than 1024 px (tablets and web) */
+@media (min-width: 1024px) {
+    .result-wrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+    }
+
+    .search-wrapper {
+        max-width: 900px;
+        margin: 100px auto;
     }
 }
